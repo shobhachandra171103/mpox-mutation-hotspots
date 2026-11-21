@@ -38,11 +38,12 @@ This repository documents the computational workflow and analytical outputs for 
    * Calculate synonymous (`dS`) and non-synonymous (`dN`) substitution ratios (`dN/dS`) in Python (`pandas`).
    * Generate SNP density plots, 3-bp trinucleotide motif charts, top mutated gene rankings, annotated Manhattan plots, R-based semi-log `dN/dS` selection plots, and `pycirclize` Circos plots.
 
-## Key Findings Summary
+## Key Findings & Results
 
-* **Terminal Hotspot Concentration:** Out of **395** total 500 bp windows, **257 windows** (`density > 0.01`) were identified as hotspots, with peak density reaching **0.738** (`369` SNPs in `190,000–190,500 bp`) concentrated in the Inverted Terminal Repeats (ITRs) and host-range / immune-evasion accessory regions.
-* **3-bp Context & Codon Bias:** Trinucleotide motif distributions reflect strong AT-richness (~67% AT) and mutational/selection pressures, with high representation of AT-rich motifs (such as `TCA` and `ACT`) and low counts for GC-heavy motifs (`CCC`, `GGG`).
-* **Top Mutated Genes & Selection:** High-mutation loci include hypothetical proteins (`PHDGHHDA_00204`, `PHDGHHDA_00199`, `PHDGHHDA_00208`, `PHDGHHDA_00209`) as well as immune-modulating and host-interaction genes (e.g., ankyrin repeat proteins `OPG023`/`OPG025`, pro-viral epidermal growth factor, `Protein C10`, and soluble interferon alpha/beta receptor `OPG204`). Selection analysis (`114` of `152` genes showing `dN/dS > 1` in the selection dataset) highlights strong positive selection in genes such as `PHDGHHDA_00191` (pseudokinase `OPG198`, ratio `18.0`) and `PHDGHHDA_00118` (major core protein `OPG129`, ratio `11.0`).
+* **Genome-Wide Hotspot Clustering:** Across 500 bp sliding windows (`mpxv_snp_density.png` and `mpxv_annotated_manhattan.jpg`), SNP counts remain low across the central genome and cluster strongly toward the terminal regions—with a left-side peak (~7,500–15,000 bp, ~300 SNPs/window) and a higher right-side peak (~175,000–190,500 bp, reaching ~369 SNPs/window), annotated at high-intensity peaks with `ID=PHDGHHDA_00208` and `ID=PHDGHHDA_00207`.
+* **Top Mutated Genes in Hotspot Windows:** As shown in `mpxv_top_genes_fixed.png`, cumulative hotspot SNPs are led by `PHDGHHDA_00204` (`hypothetical protein`, ~2,700 SNPs), followed by `PHDGHHDA_00015` (`Ankyrin repeat domain-containing protein OPG023`, ~1,000 SNPs), `PHDGHHDA_00199` (`hypothetical protein`, ~900 SNPs), `PHDGHHDA_00207` (`Protein OPG200`), `PHDGHHDA_00009` (`Pro-Viral epidermal growth factor`), `PHDGHHDA_00209` (`hypothetical protein`), `PHDGHHDA_00011` (`Protein C10`), `PHDGHHDA_00198` (`Soluble interferon alpha/beta receptor OPG204`), `PHDGHHDA_00017` (`Ankyrin repeat protein OPG025`), and `PHDGHHDA_00008` (`hypothetical protein`).
+* **3-bp Trinucleotide Context Profile:** In `mpxv_context_bias.png`, motif frequencies are highest for AT-rich trinucleotides such as `TCA` (>600), `TGA` (~580), `AGA` (~565), `TCT` (~525), `ATA` (~515), and `TAT` (~505), while GC-heavy motifs such as `CCC` and `GGG` show much lower counts.
+* **Selection Pressure (`dN/dS`) & Circular Architecture:** The R semi-log plot (`R_mpxv_selection_log.png`) and circular analysis (`mpxv_circular_analysis.png`, showing `dN/dS Ratio` and `Gene Density` tracks) highlight elevated positive selection ratios across loci including `00191` (`18.0`), `00118` (`11.0`), `00051` (`8.0`), `00062` (`7.0`), and `00196`, alongside `00169`, `00003`, `00058`, `00055`, `00051`, `00136`, `00184`, `00102`, `00134`, and `00049`.
 
 ## Repository Structure
 
@@ -50,5 +51,4 @@ This repository documents the computational workflow and analytical outputs for 
 mpox-mutation-hotspots/
 ├── README.md
 ├── scripts/          # Bash, Python, and R scripts for preprocessing, filtering, hotspots, dN/dS, and plotting
-├── results/          # Summary tables and generated figures (SNP density, Manhattan, dN/dS, Circos)
-└── docs/             # Methodology notes and workflow diagrams
+└── results/          # Generated figures (Manhattan, circular, 3-bp context, SNP density, top genes, semi-log dN/dS)
