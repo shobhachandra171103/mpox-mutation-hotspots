@@ -40,10 +40,24 @@ This repository documents the computational workflow and analytical outputs for 
 
 ## Key Findings & Results
 
-* **Genome-Wide Hotspot Clustering:** Across 500 bp sliding windows (`mpxv_snp_density.png` and `mpxv_annotated_manhattan.jpg`), SNP counts remain low across the central genome and cluster strongly toward the terminal regions—with a left-side peak (~7,500–15,000 bp, ~300 SNPs/window) and a higher right-side peak (~175,000–190,500 bp, reaching ~369 SNPs/window), annotated at high-intensity peaks with `ID=PHDGHHDA_00208` and `ID=PHDGHHDA_00207`.
-* **Top Mutated Genes in Hotspot Windows:** As shown in `mpxv_top_genes_fixed.png`, cumulative hotspot SNPs are led by `PHDGHHDA_00204` (`hypothetical protein`, ~2,700 SNPs), followed by `PHDGHHDA_00015` (`Ankyrin repeat domain-containing protein OPG023`, ~1,000 SNPs), `PHDGHHDA_00199` (`hypothetical protein`, ~900 SNPs), `PHDGHHDA_00207` (`Protein OPG200`), `PHDGHHDA_00009` (`Pro-Viral epidermal growth factor`), `PHDGHHDA_00209` (`hypothetical protein`), `PHDGHHDA_00011` (`Protein C10`), `PHDGHHDA_00198` (`Soluble interferon alpha/beta receptor OPG204`), `PHDGHHDA_00017` (`Ankyrin repeat protein OPG025`), and `PHDGHHDA_00008` (`hypothetical protein`).
-* **3-bp Trinucleotide Context Profile:** In `mpxv_context_bias.png`, motif frequencies are highest for AT-rich trinucleotides such as `TCA` (>600), `TGA` (~580), `AGA` (~565), `TCT` (~525), `ATA` (~515), and `TAT` (~505), while GC-heavy motifs such as `CCC` and `GGG` show much lower counts.
-* **Selection Pressure (`dN/dS`) & Circular Architecture:** The R semi-log plot (`R_mpxv_selection_log.png`) and circular analysis (`mpxv_circular_analysis.png`, showing `dN/dS Ratio` and `Gene Density` tracks) highlight elevated positive selection ratios across loci including `00191` (`18.0`), `00118` (`11.0`), `00051` (`8.0`), `00062` (`7.0`), and `00196`, alongside `00169`, `00003`, `00058`, `00055`, `00051`, `00136`, `00184`, `00102`, `00134`, and `00049`.
+* **Genome-Wide Hotspot Clustering:** Across 500 bp sliding windows, SNP counts remain low across the central genome and cluster strongly toward the terminal regions—with a left-side peak (~7,500–15,000 bp, ~300 SNPs/window) and a higher right-side peak (~175,000–190,500 bp, reaching ~369 SNPs/window), annotated at high-intensity peaks with `ID=PHDGHHDA_00208` and `ID=PHDGHHDA_00207`.
+* **Top Mutated Genes in Hotspot Windows:** Cumulative hotspot SNPs are led by `PHDGHHDA_00204` (`hypothetical protein`, ~2,700 SNPs), followed by `PHDGHHDA_00015` (`Ankyrin repeat domain-containing protein OPG023`, ~1,000 SNPs), `PHDGHHDA_00199` (`hypothetical protein`, ~900 SNPs), `PHDGHHDA_00207` (`Protein OPG200`), `PHDGHHDA_00009` (`Pro-Viral epidermal growth factor`), `PHDGHHDA_00209` (`hypothetical protein`), `PHDGHHDA_00011` (`Protein C10`), `PHDGHHDA_00198` (`Soluble interferon alpha/beta receptor OPG204`), `PHDGHHDA_00017` (`Ankyrin repeat protein OPG025`), and `PHDGHHDA_00008` (`hypothetical protein`).
+* **3-bp Trinucleotide Context Profile:** Motif frequencies are highest for AT-rich trinucleotides such as `TCA` (>600), `TGA` (~580), `AGA` (~565), `TCT` (~525), `ATA` (~515), and `TAT` (~505), while GC-heavy motifs such as `CCC` and `GGG` show much lower counts.
+* **Selection Pressure (`dN/dS`) & Circular Architecture:** Semi-log `dN` vs. `dS` selection analysis and circular genome tracks (`dN/dS Ratio` and `Gene Density`) highlight elevated positive selection ratios across loci including `00191` (`18.0`), `00118` (`11.0`), `00051` (`8.0`), `00062` (`7.0`), and `00196`, alongside `00169`, `00003`, `00058`, `00055`, `00136`, `00184`, `00102`, `00134`, and `00049`.
+
+### Visual Summary
+
+![500bp SNP Density Across Genome](results/mpxv_snp_density.png)
+
+![Annotated Manhattan Plot: MPXV Mutation Hotspots](results/mpxv_annotated_manhattan.jpg)
+
+![Top 10 Most Mutated Genes in Hotspot Windows](results/mpxv_top_genes_fixed.png)
+
+![Distribution of 3-bp SNP Contexts in MPXV](results/mpxv_context_bias.png)
+
+![MPXV Selection Pressure (Semi-Log)](results/R_mpxv_selection_log.png)
+
+![Circular Genome Analysis: dN/dS Ratio and Gene Density](results/mpxv_circular_analysis.png)
 
 ## Repository Structure
 
